@@ -374,6 +374,30 @@ footer {
 
   footer {
     margin: 0 90px; }
+    footer h1 {
+      font-size: 50px; }
+    footer form {
+      width: 500px; }
+      footer form input, footer form textarea {
+        border: 1px solid #6c6a68;
+        color: #a8a6a4;
+        padding-top: 20px;
+        padding-left: 20px;
+        padding-bottom: 20px;
+        font-size: 24px;
+        outline: none; }
+      footer form textarea {
+        padding-bottom: 150px; }
+      footer form button {
+        margin-top: 20px;
+        padding: 20px 0;
+        font-family: 'latobold';
+        font-size: 18px;
+        border: 2px solid #DEAE59;
+        color: #DEAE59;
+        text-align: center;
+        background: transparent;
+        text-transform: uppercase; }
     footer ul .instagram, footer ul .phone {
       display: block;
       width: 70px;

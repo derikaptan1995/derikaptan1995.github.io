@@ -40,8 +40,8 @@
       <file leaf-file-name="index.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/styles/index.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="227" column="5" lean-forward="true" selection-start-line="221" selection-start-column="4" selection-end-line="227" selection-end-column="5" />
+            <state relative-caret-position="487">
+              <caret line="163" column="4" lean-forward="false" selection-start-line="163" selection-start-column="4" selection-end-line="192" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -50,8 +50,8 @@
       <file leaf-file-name="_mobile.scss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/styles/_mobile.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="81" column="24" lean-forward="false" selection-start-line="81" selection-start-column="24" selection-end-line="81" selection-end-column="24" />
+            <state relative-caret-position="142">
+              <caret line="77" column="19" lean-forward="false" selection-start-line="77" selection-start-column="19" selection-end-line="77" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -269,12 +269,12 @@
       <option name="presentableId" value="Default" />
       <updated>1499513769345</updated>
       <workItem from="1499513770804" duration="9756000" />
-      <workItem from="1499634836186" duration="11951000" />
+      <workItem from="1499634836186" duration="12439000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21707000" />
+    <option name="totallyTimeSpent" value="22195000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="633" y="22" width="1149" height="986" extended-state="0" />
@@ -429,16 +429,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/styles/index.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="227" column="5" lean-forward="true" selection-start-line="221" selection-start-column="4" selection-end-line="227" selection-end-column="5" />
+        <state relative-caret-position="487">
+          <caret line="163" column="4" lean-forward="false" selection-start-line="163" selection-start-column="4" selection-end-line="192" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/styles/_mobile.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="81" column="24" lean-forward="false" selection-start-line="81" selection-start-column="24" selection-end-line="81" selection-end-column="24" />
+        <state relative-caret-position="142">
+          <caret line="77" column="19" lean-forward="false" selection-start-line="77" selection-start-column="19" selection-end-line="77" selection-end-column="19" />
           <folding />
         </state>
       </provider>

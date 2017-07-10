@@ -74,6 +74,37 @@
   }
   footer {
     margin: 0 90px;
+    h1 {
+      font-size: 50px;
+    }
+    form {
+      width: 500px;
+      input,textarea {
+        border: 1px solid $color7;
+        color: $color10;
+        padding-top: 20px;
+        padding-left: 20px;
+        padding-bottom: 20px;
+        font-size: 24px;
+        outline: none;
+      }
+
+      textarea {
+        padding-bottom: 150px;
+      }
+
+      button {
+        margin-top: 20px;
+        padding: 20px 0;
+        font-family: 'latobold';
+        font-size: 18px;
+        border: 2px solid $color11;
+        color: $color11;
+        text-align: center;
+        background: transparent;
+        text-transform: uppercase;
+      }
+    }
     ul {
       .instagram, .phone {
         display: block;

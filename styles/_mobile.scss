@@ -1,0 +1,59 @@
+@media only screen and (max-device-width: 414px) {
+  nav {
+    display: none;
+  }
+  header {
+    figure {
+      img {
+        display: none;
+      }
+    }
+    .test {
+      background: url("../img/header.png") no-repeat;
+      background-size: cover;
+      width: 320px;
+      height: 700px;
+    }
+    .logo {
+      position: absolute;
+      top: 15%;
+      margin: 0 auto;
+      font-size: 32px;
+      font-family: 'latolight';
+      color: $color6;
+      margin-left: 25px;
+    }
+  }
+  .recentWorks {
+    display: none;
+    margin: 0 90px;
+    .firstBlock {
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      .firstWork {
+        width: 690px;
+        height: 690px;
+      }
+      .twoWorks {
+        display: flex;
+        flex-direction: row;
+        margin: 0;
+        margin-top: 25px;
+        .secondWork, .thirdWork {
+          width: 330px;
+          height:330px;
+        }
+      }
+    }
+    h1 {
+      padding-left: 0;
+    }
+  }
+  .portfolio {
+    display: none;
+  }
+  footer {
+    display: none;
+  }
+}

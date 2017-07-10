@@ -1,27 +1,30 @@
 @media only screen and (max-device-width: 414px) {
   header {
     .header-photo {
-      background: url("../img/header.png") no-repeat;
-      background-size: contain;
+      background: url(../img/header.png) no-repeat;
+      background-size: cover;
       width: 100%;
-      height: 700px;
+      height: 300px;
     }
     .logo {
       position: absolute;
-      top: 15%;
-      margin: 0 auto;
-      font-size: 30px;
+      top: 20%;
+      left: 5%;
+      font-size: 14px;
       font-family: 'latolight';
-      color: $color6;
-      margin-left: 25px;
+      color: #FFF;
+      margin:0;
     }
   }
   .recentWorks {
     display: flex;
     flex-direction: column;
-    margin: 0 90px;
+    margin: 20px 20px 0;
     padding: 0;
-    font-size:40px;
+    font-size: 40px;
+    h1 {
+      padding-left: 0;
+    }
 
     .firstBlock {
       margin: 0 auto;
@@ -29,30 +32,32 @@
       flex-direction: column;
       .firstWork {
         width: 100%;
-        height: 690px;
+        height: auto;
       }
       .twoWorks {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
         margin: 0;
-        margin-top: 25px;
+        margin-top: 10px;
         width: 100%;
         .secondWork {
           margin-right: 10px;
-          width: 48%;
-          height:330px;
+          width: 100%;
+          display: block;
+          height: auto;
         }
         .thirdWork {
-          margin-left: 10px;
-          width: 48%;
-          height:330px;
+          width: 100%;
+          display: block;
+          height: auto;
+          margin-top: 10px;
         }
       }
     }
     .secondBlock {
-      margin: 25px 0;
-      margin-bottom: 240px;
+      margin: 10px 0;
+      .fourthWork {
+        width: 100%;
+        height: auto;
+      }
     }
     h1 {
       padding-left: 0;
@@ -60,14 +65,14 @@
   }
   .portfolio {
     display: block;
-    margin: 0 90px;
+    margin: 0 20px;
     .content_item {
       display: flex;
       flex-direction: column;
       margin: 0;
       a {
         display: block;
-        width:100%;
+        width: 100%;
         &:hover,
         &:focus {
           outline: none;
@@ -75,25 +80,28 @@
       }
       .photosBlock {
         width: 100%;
-        height: 525px;
+        height: auto;
       }
       .photosBlock_text {
-        margin: 65px auto;
+        margin: 25px auto;
+        a {
+          padding: 20px 0;
+        }
       }
     }
     .content_item.reverse {
       display: flex;
       flex-direction: column-reverse;
-
     }
   }
   footer {
-    margin: 0 90px;
+    margin: 0 20px;
     h1 {
-      font-size: 50px;
+      font-size: 40px;
+      text-align: center;
     }
     form {
-      width: 500px;
+      width: 100%;
       input,textarea {
         border: 1px solid $color7;
         color: $color10;
@@ -121,6 +129,9 @@
       }
     }
     ul {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
       .instagram, .phone {
         display: block;
         width: 70px;

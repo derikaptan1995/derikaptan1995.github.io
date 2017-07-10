@@ -227,7 +227,8 @@ header .logo {
       .portfolio .content_item a:hover, .portfolio .content_item a:focus {
         outline: none; }
     .portfolio .content_item .photosBlock {
-      height: 450px; }
+      display: block;
+      max-width: 100%; }
     .portfolio .content_item .photosBlock_text {
       display: flex;
       width: 50%;
@@ -322,56 +323,59 @@ footer {
 
 @media only screen and (max-device-width: 414px) {
   header .header-photo {
-    background: url("../img/header.png") no-repeat;
-    background-size: contain;
+    background: url(../img/header.png) no-repeat;
+    background-size: cover;
     width: 100%;
-    height: 700px; }
+    height: 300px; }
   header .logo {
     position: absolute;
-    top: 15%;
-    margin: 0 auto;
-    font-size: 30px;
+    top: 20%;
+    left: 5%;
+    font-size: 14px;
     font-family: 'latolight';
     color: #FFF;
-    margin-left: 25px; }
+    margin: 0; }
 
   .recentWorks {
     display: flex;
     flex-direction: column;
-    margin: 0 90px;
+    margin: 20px 20px 0;
     padding: 0;
     font-size: 40px; }
+    .recentWorks h1 {
+      padding-left: 0; }
     .recentWorks .firstBlock {
       margin: 0 auto;
       display: flex;
       flex-direction: column; }
       .recentWorks .firstBlock .firstWork {
         width: 100%;
-        height: 690px; }
+        height: auto; }
       .recentWorks .firstBlock .twoWorks {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
         margin: 0;
-        margin-top: 25px;
+        margin-top: 10px;
         width: 100%; }
         .recentWorks .firstBlock .twoWorks .secondWork {
           margin-right: 10px;
-          width: 48%;
-          height: 330px; }
+          width: 100%;
+          display: block;
+          height: auto; }
         .recentWorks .firstBlock .twoWorks .thirdWork {
-          margin-left: 10px;
-          width: 48%;
-          height: 330px; }
+          width: 100%;
+          display: block;
+          height: auto;
+          margin-top: 10px; }
     .recentWorks .secondBlock {
-      margin: 25px 0;
-      margin-bottom: 240px; }
+      margin: 10px 0; }
+      .recentWorks .secondBlock .fourthWork {
+        width: 100%;
+        height: auto; }
     .recentWorks h1 {
       padding-left: 0; }
 
   .portfolio {
     display: block;
-    margin: 0 90px; }
+    margin: 0 20px; }
     .portfolio .content_item {
       display: flex;
       flex-direction: column;
@@ -383,19 +387,22 @@ footer {
           outline: none; }
       .portfolio .content_item .photosBlock {
         width: 100%;
-        height: 525px; }
+        height: auto; }
       .portfolio .content_item .photosBlock_text {
-        margin: 65px auto; }
+        margin: 25px auto; }
+        .portfolio .content_item .photosBlock_text a {
+          padding: 20px 0; }
     .portfolio .content_item.reverse {
       display: flex;
       flex-direction: column-reverse; }
 
   footer {
-    margin: 0 90px; }
+    margin: 0 20px; }
     footer h1 {
-      font-size: 50px; }
+      font-size: 40px;
+      text-align: center; }
     footer form {
-      width: 500px; }
+      width: 100%; }
       footer form input, footer form textarea {
         border: 1px solid #6c6a68;
         color: #a8a6a4;
@@ -416,16 +423,20 @@ footer {
         text-align: center;
         background: transparent;
         text-transform: uppercase; }
-    footer ul .instagram, footer ul .phone {
-      display: block;
-      width: 70px;
-      height: 62px;
-      margin-bottom: 50px;
-      background: no-repeat center;
-      background-size: 60px 60px; }
-    footer ul .instagram {
-      background-image: url("../img/icons/instagram.svg"); }
-    footer ul .phone {
-      background-image: url("../img/icons/phone.svg"); } }
+    footer ul {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0; }
+      footer ul .instagram, footer ul .phone {
+        display: block;
+        width: 70px;
+        height: 62px;
+        margin-bottom: 50px;
+        background: no-repeat center;
+        background-size: 60px 60px; }
+      footer ul .instagram {
+        background-image: url("../img/icons/instagram.svg"); }
+      footer ul .phone {
+        background-image: url("../img/icons/phone.svg"); } }
 
 /*# sourceMappingURL=main.css.map */

@@ -115,7 +115,8 @@ header {
       }
     }
     .photosBlock {
-      height: 450px;
+      display: block;
+      max-width: 100%;
     }
     .photosBlock_text {
       display: flex;

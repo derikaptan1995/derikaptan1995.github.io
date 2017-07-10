@@ -373,6 +373,17 @@ footer {
       flex-direction: column-reverse; }
 
   footer {
-    display: none; } }
+    margin: 0 90px; }
+    footer ul .instagram, footer ul .phone {
+      display: block;
+      width: 70px;
+      height: 62px;
+      margin-bottom: 50px;
+      background: no-repeat center;
+      background-size: 60px 60px; }
+    footer ul .instagram {
+      background-image: url("../img/icons/instagram.svg"); }
+    footer ul .phone {
+      background-image: url("../img/icons/phone.svg"); } }
 
 /*# sourceMappingURL=main.css.map */

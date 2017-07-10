@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <title>A.R. Photo</title>
     <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <link rel="stylesheet" type="text/css" href="styles/jquery.fancybox.css">
+    <link rel="stylesheet" type="text/css" href="styles/fullscreen.css">
+    <link rel="stylesheet" type="text/css" href="styles/slideshow.css">
+    <link rel="stylesheet" type="text/css" href="styles/thumbs.css">
 </head>
 <body>
 <nav class="menu">
@@ -34,10 +38,20 @@
 </section>
 <section class="portfolio">
         <div class="content_item">
-            <img src='img/portfolio/portfolio1.png' class="photosBlock"/>
+            <a href="img/portfolio/portfolio1.png" data-fancybox="portfolio=first" data-caption="My caption">
+                <img src='img/portfolio/portfolio1.png' class="photosBlock"/>
+            </a>
             <div class="photosBlock_text">
                 <span>First shooting</span>
                 <a href="#">MORE</a>
+            </div>
+            <div class="hidden">
+                <a href="img/portfolio/portfolio1.png" data-fancybox="portfolio=first" data-caption="My caption">
+                    <img src='img/portfolio/portfolio1.png' class="photosBlock"/>
+                </a>
+                <a href="img/portfolio/portfolio1.png" data-fancybox="portfolio=first" data-caption="My caption">
+                    <img src='img/portfolio/portfolio1.png' class="photosBlock"/>
+                </a>
             </div>
         </div>
         <div class="content_item reverse">
@@ -77,5 +91,13 @@
         </ul>
     </section>
 </footer>
+<script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="script/jquery.fancybox.js"></script>
+<script type="text/javascript">
+    $("[data-fancybox]").fancybox({
+        selector : '[data-fancybox="images"]',
+        loop     : true
+    });
+</script>
 </body>
 </html>

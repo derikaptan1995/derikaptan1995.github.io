@@ -315,21 +315,16 @@ footer {
         color: #DEAE59; }
 
 @media only screen and (max-device-width: 414px) {
-  nav {
-    display: none; }
-
-  header figure img {
-    display: none; }
-  header .test {
+  header .header-photo {
     background: url("../img/header.png") no-repeat;
-    background-size: cover;
+    background-size: contain;
     width: 100%;
     height: 700px; }
   header .logo {
     position: absolute;
     top: 15%;
     margin: 0 auto;
-    font-size: 32px;
+    font-size: 30px;
     font-family: 'latolight';
     color: #FFF;
     margin-left: 25px; }

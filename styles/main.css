@@ -330,14 +330,16 @@ footer {
     margin-left: 25px; }
 
   .recentWorks {
-    display: none;
-    margin: 0 90px; }
+    display: flex;
+    flex-direction: column;
+    margin: 0 90px;
+    padding: 0; }
     .recentWorks .firstBlock {
       margin: 0 auto;
       display: flex;
       flex-direction: column; }
       .recentWorks .firstBlock .firstWork {
-        width: 690px;
+        width: 100%;
         height: 690px; }
       .recentWorks .firstBlock .twoWorks {
         display: flex;
@@ -345,8 +347,10 @@ footer {
         margin: 0;
         margin-top: 25px; }
         .recentWorks .firstBlock .twoWorks .secondWork, .recentWorks .firstBlock .twoWorks .thirdWork {
-          width: 330px;
+          width: 48%;
           height: 330px; }
+    .recentWorks .secondBlock {
+      margin: 25px 0; }
     .recentWorks h1 {
       padding-left: 0; }
 

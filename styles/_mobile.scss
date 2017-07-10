@@ -44,6 +44,7 @@
     }
     .secondBlock {
       margin: 25px 0;
+      margin-bottom: 240px;
     }
     h1 {
       padding-left: 0;
@@ -51,6 +52,25 @@
   }
   .portfolio {
     display: block;
+    margin: 0 90px;
+    .content_item {
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+
+      .photosBlock {
+        width: 100%;
+        height: 525px;
+      }
+      .photosBlock_text {
+        margin: 65px auto;
+      }
+    }
+    .content_item.reverse {
+      display: flex;
+      flex-direction: column-reverse;
+
+    }
   }
   footer {
     display: none;

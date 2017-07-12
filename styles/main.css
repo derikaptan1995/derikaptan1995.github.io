@@ -410,7 +410,7 @@ footer {
       height: 2px;
       width: 30px;
       display: block;
-      background-color: #ffffff;
+      background-color: #DEAE59;
       margin-bottom: 4px;
       transition: transform .2s ease, background-color .5s ease; }
     .menu-icon__line-left {

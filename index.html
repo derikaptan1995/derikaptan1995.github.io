@@ -11,14 +11,21 @@
     <link rel="stylesheet" type="text/css" href="styles/thumbs.css">
 </head>
 <body>
-<nav class="menu">
-    <ul>
-        <li><a href='#'>Main</a></li>
-        <li><a href='#'>Recent Works</a></li>
-        <li class="icon_photo"></li>
-        <li><a href='#'>Portfolio</a></li>
-        <li><a href='#'>Contacts</a></li>
-    </ul>
+<div class="menu-icon">
+    <span class="menu-icon__line menu-icon__line-left"></span>
+    <span class="menu-icon__line"></span>
+    <span class="menu-icon__line menu-icon__line-right"></span>
+</div>
+<nav>
+    <div class="nav__content">
+        <ul class="nav__list">
+            <li class="nav__list-item"><a href='#'>Home</a></li>
+            <li class="nav__list-item"><a href='#'>About</a></li>
+            <li class="icon_photo"></li>
+            <li class="nav__list-item"><a href='#'>Projects</a></li>
+            <li class="nav__list-item"><a href='#'>Contact</a></li>
+        </ul>
+    </div>
 </nav>
 <header>
     <div class="header-photo"></div>
@@ -110,11 +117,20 @@
 <footer>
     <section>
         <h1>Get in touch</h1>
-            <form id="data">
-                <input type="text" value="Your name"/>
-                <input type="email" value="Email"/>
-                <textarea>Message</textarea>
-                <button type="submit" form="data">Send</button>
+            <form action="mail.php" method="post" class="rf form-check">
+                <div class="rline">
+                    <input type="text" name="name" id="name" placeholder="Your name" class="rfield" required="required" />
+                    <span class="rfield_error">Введите имя</span>
+                </div>
+                <div class="rline">
+                    <input type="email" name="email" id="email" placeholder="Email" class="rfield" required="required" />
+                    <span class="rfield_error">Введите почту</span>
+                </div>
+                <div class="rline">
+                    <textarea name="message" id="" placeholder="Message" class="rfield" required="required"></textarea>
+                    <span class="rfield_error">Введите сообщение</span>
+                </div>
+                <button class="btn_submit">Send</button>
             </form>
         <ul>
             <li><a href="https://www.instagram.com/_ar.photo"><span class="instagram"></span></a></li>
@@ -122,7 +138,11 @@
         </ul>
     </section>
 </footer>
-<script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+<div class="modal-thanks">
+    <span>Спасибо! Ваша заявка отправлена!</span>
+</div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="script/jquery.fancybox.js"></script>
 <script type="text/javascript">
     $("[data-fancybox]").fancybox({
@@ -130,5 +150,38 @@
         loop     : true
     });
 </script>
-</body>
+<script type="text/javascript">
+    console.clear();
+
+    const app = (() => {
+            let body;
+    let menu;
+    let menuItems;
+
+    const init = () => {
+        body = document.querySelector('body');
+        menu = document.querySelector('.menu-icon');
+        menuItems = document.querySelectorAll('.nav__list-item');
+
+        applyListeners();
+    }
+
+    const applyListeners = () => {
+        menu.addEventListener('click', () => toggleClass(body, 'nav-active'));
+    }
+
+    const toggleClass = (element, stringClass) => {
+        if(element.classList.contains(stringClass))
+            element.classList.remove(stringClass);
+        else
+            element.classList.add(stringClass);
+    }
+
+    init();
+    })();
+</script>
+<script src="script/main.js"></script>
+<script src="script/formcheck.js"></script>
+<script src="script/is.mobile.js"></script>
+<script src="script/plugins-scroll.js"></script>
 </html>

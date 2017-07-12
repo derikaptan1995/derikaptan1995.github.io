@@ -130,3 +130,19 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder {
+    color: transparent !important;
+}
+input:focus::-moz-placeholder,
+textarea:focus::-moz-placeholder {
+    color: transparent !important;
+}
+input:focus:-moz-placeholder,
+textarea:focus:-moz-placeholder{
+    color: transparent !important;
+}
+input:focus,
+textarea:focus {
+    outline: none;
+}

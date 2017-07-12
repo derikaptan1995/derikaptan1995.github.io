@@ -1,4 +1,163 @@
 @media only screen and (max-device-width: 414px) {
+
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  //default state
+  .menu-icon {
+    $size: 30px;
+    height: $size;
+    width: $size;
+    position: fixed;
+    z-index:2;
+    left: 5%;
+    top: 4%;
+    cursor: pointer;
+    &__line{
+      height: 2px;
+      width: $size;
+      display: block;
+      background-color: $font--color;
+      margin-bottom: 4px;
+      transition: transform .2s ease, background-color .5s ease;
+    }
+    &__line-left{
+      width: $size / 2;
+    }
+    &__line-right{
+      width: $size / 2;
+      float: right;
+    }
+  }
+
+  nav {
+    $width: 100vw;
+    $height: 10vh;
+    $font--size--calc: calc(2vw + 10px);
+    $transition--easing: cubic-bezier(.77,0,.175,1);
+    position: fixed;
+    z-index:1;
+    &:before,&:after{
+      content: "";
+      position: fixed;
+      width:$width;
+      height:$height;
+      background: rgba(#eaeaea, .2);
+      z-index: -1;
+      transition: transform $transition--easing $transition--length + s;
+      transform: translateX(0%) translateY(-100%);
+    }
+    &:after {
+      background: rgba(#ffffff, 1);
+      opacity: 0.7;
+      transition-delay: 0s;
+    }
+    &:before {
+      transition-delay: .1s;
+    }
+    .nav__content {
+      position: fixed;
+      top: 5%;
+      left: 5%;
+      transform: translate(0%,-50%);
+      width: 100%;
+      text-align: center;
+      font-size: $font--size--calc;
+      font-weight: 200;
+      cursor: pointer;
+
+      .nav__list {
+        position: initial;
+        display: block;
+        background: none;
+
+        .nav__list-item {
+          position: relative;
+          display: inline-block;
+          transition-delay: $transition--length + s;
+          opacity: 0;
+          transform: translate(0%, 100%);
+          transition: opacity .2s ease, transform .3s ease;
+          padding: 0;
+          letter-spacing: 0;
+
+          a {
+            color: $color1;
+            font-size: 17px;
+            font-family:$font--primary;
+            &:hover {
+              color: $color1;
+            }
+
+          }
+
+          &:before {
+            content: "";
+            position: absolute;
+            background: $font--color--active;
+            width: 20px;
+            height: 1px;
+            top: 100%;
+            transform: translate(0%, 0%);
+            transition: all .3s ease;
+            z-index: -1;
+          }
+          &:hover {
+            &:before{
+              width: 100%;
+            }
+          }
+        }
+        .icon_photo {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .nav-active {
+    $menu--items--count: 5;
+    .menu-icon {
+      &__line{
+        background-color: #000;
+        transform: translateX(0px) rotate(-45deg);
+      }
+      &__line-left{
+        transform: translateX(1px) rotate(45deg);
+      }
+      &__line-right{
+        transform: translateX(-2px) rotate(45deg);
+      }
+    }
+    nav {
+      visibility:visible;
+      &:before,&:after{
+        transform: translateX(0%) translateY(0%);
+      }
+      &:after {
+        transition-delay: .1s;
+      }
+      &:before {
+        transition-delay: 0s;
+      }
+      .nav__content {
+        .nav__list-item {
+          opacity: 1;
+          transform: translateX(0%);
+          transition: opacity .3s ease, transform .3s ease, color .3s ease;
+          @for $i from 0 through $menu--items--count {
+            &:nth-child(#{$i}) {
+              transition-delay: $transition--length * $i / 8 + .5 + s;
+              margin-left: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+
   header {
     .header-photo {
       background: url(../img/header.png) no-repeat;

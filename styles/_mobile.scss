@@ -12,8 +12,8 @@
     width: $size;
     position: fixed;
     z-index:2;
-    left: 5%;
-    top: 4%;
+    left: 2.5%;
+    top: 2%;
     cursor: pointer;
     &__line{
       height: 2px;
@@ -34,7 +34,7 @@
 
   nav {
     $width: 100vw;
-    $height: 10vh;
+    $height: 8vh;
     $font--size--calc: calc(2vw + 10px);
     $transition--easing: cubic-bezier(.77,0,.175,1);
     position: fixed;
@@ -51,7 +51,7 @@
     }
     &:after {
       background: rgba(#ffffff, 1);
-      opacity: 0.7;
+      opacity: 1;
       transition-delay: 0s;
     }
     &:before {
@@ -59,7 +59,7 @@
     }
     .nav__content {
       position: fixed;
-      top: 5%;
+      top: 3%;
       left: 5%;
       transform: translate(0%,-50%);
       width: 100%;
@@ -85,7 +85,7 @@
 
           a {
             color: $color1;
-            font-size: 17px;
+            font-size: 18px;
             font-family:$font--primary;
             &:hover {
               color: $color1;
@@ -243,9 +243,6 @@
       }
       .photosBlock_text {
         margin: 25px auto;
-        a {
-          padding: 20px 0;
-        }
       }
     }
     .content_item.reverse {
@@ -254,7 +251,7 @@
     }
   }
   footer {
-    margin: 0 20px;
+    margin: 45px 20px 0;
     h1 {
       font-size: 40px;
       text-align: center;
@@ -276,12 +273,13 @@
       }
 
       button {
-        margin-top: 20px;
-        padding: 20px 0;
+        padding: 10px 0px;
+        width: 35%;
+        margin: 18px auto 0;
         font-family: 'latobold';
-        font-size: 36px;
-        border: 2px solid $color11;
-        color: $color11;
+        font-size: 20px;
+        border: 2px solid #DEAE59;
+        color: #DEAE59;
         text-align: center;
         background: transparent;
         text-transform: uppercase;
@@ -290,14 +288,15 @@
     ul {
       display: flex;
       justify-content: center;
-      margin: 20px 0;
+      margin: 40px 0 0;
+
       .instagram, .phone {
         display: block;
-        width: 70px;
-        height: 62px;
+        width: 50px;
+        height: 42px;
         margin-bottom: 50px;
         background: no-repeat center;
-        background-size: 60px 60px;
+        background-size: 40px 40px;
       }
       .instagram {
         background-image: url('../img/icons/instagram.svg');
@@ -305,6 +304,12 @@
 
       .phone {
         background-image: url('../img/icons/phone.svg');
+      }
+      li:first-child {
+        margin-right: 40px;
+      }
+      li:last-child {
+        margin-left: 40px;
       }
     }
 

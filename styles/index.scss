@@ -124,29 +124,13 @@ header {
     .photosBlock_text {
       display: flex;
       width: 50%;
-      margin-top: 65px;
+      margin-top: 0;
       flex-direction: column;
+      justify-content: center;
+
       span {
         font-size: 36px;
         text-align: center;
-      }
-      a {
-        padding: 20px 50px;
-        border: 3px solid $color11;
-        font-size: 20px;
-        font-weight: 800;
-        text-align: center;
-        text-decoration: none;
-        color: $color11;
-        margin: 0 auto;
-        margin-top: 60px;
-        transition: 150ms linear;
-      }
-      a:hover {
-        -webkit-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-        transform: scale(1.1);
-        background: rgba(0,0,0,0.05);
       }
     }
   }

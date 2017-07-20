@@ -19,19 +19,19 @@
 <nav>
     <div class="nav__content">
         <ul class="nav__list">
-            <li class="nav__list-item"><a href='#'>Home</a></li>
-            <li class="nav__list-item"><a href='#'>About</a></li>
+            <li class="nav__list-item"><a href="#Home" rel="" id="anchor1" class="anchorLink">Home</a></li>
+            <li class="nav__list-item"><a href="#RecentWorks" rel="" id="anchor2" class="anchorLink">Recent Works</a></li>
             <li class="icon_photo"></li>
-            <li class="nav__list-item"><a href='#'>Projects</a></li>
-            <li class="nav__list-item"><a href='#'>Contact</a></li>
+            <li class="nav__list-item"><a href="#Portfolio" rel="" id="anchor3" class="anchorLink">Collections</a></li>
+            <li class="nav__list-item"><a href="#Contacts" rel="" id="anchor4" class="anchorLink">Contacts</a></li>
         </ul>
     </div>
 </nav>
-<header>
+<header id="Home">
     <div class="header-photo"></div>
     <h1 class="logo">Alina Romanchuk Photography</h1>
 </header>
-<section class="recentWorks">
+<section class="recentWorks" id="RecentWorks">
     <h1>Recent Works</h1>
     <div class="firstBlock">
         <img src="img/recentWorks/test.png" class="firstWork" />
@@ -44,14 +44,31 @@
         <img src="img/recentWorks/test.png" class="fourthWork" />
     </div>
 </section>
-<section class="portfolio">
-        <div class="content_item">
+<section class="portfolio" id="Portfolio">
+        <h2 class="portfolio-title">Collections</h2>
+        <div class="content_item reverse">
             <div class="photosBlock_text">
                 <span>First shooting</span>
             </div>
             <a href="img/portfolio/portfolio1.png" data-fancybox="portfolio=first" data-caption="My caption">
                 <img src='img/portfolio/portfolio1.png' class="photosBlock"/>
             </a>
+            <div class="hidden">
+                <a href="img/portfolio/portfolio1.png" data-fancybox="portfolio=first" data-caption="My caption">
+                    <img src='img/portfolio/portfolio1.png' class="photosBlock"/>
+                </a>
+                <a href="img/portfolio/portfolio1.png" data-fancybox="portfolio=first" data-caption="My caption">
+                    <img src='img/portfolio/portfolio1.png' class="photosBlock"/>
+                </a>
+            </div>
+        </div>
+        <div class="content_item ">
+            <a href="img/portfolio/portfolio1.png" data-fancybox="portfolio=first" data-caption="My caption">
+                <img src='img/portfolio/portfolio1.png' class="photosBlock"/>
+            </a>
+            <div class="photosBlock_text">
+                <span>First shooting</span>
+            </div>
             <div class="hidden">
                 <a href="img/portfolio/portfolio1.png" data-fancybox="portfolio=first" data-caption="My caption">
                     <img src='img/portfolio/portfolio1.png' class="photosBlock"/>
@@ -62,22 +79,6 @@
             </div>
         </div>
         <div class="content_item reverse">
-            <a href="img/portfolio/portfolio1.png" data-fancybox="portfolio=first" data-caption="My caption">
-                <img src='img/portfolio/portfolio1.png' class="photosBlock"/>
-            </a>
-            <div class="photosBlock_text">
-                <span>First shooting</span>
-            </div>
-            <div class="hidden">
-                <a href="img/portfolio/portfolio1.png" data-fancybox="portfolio=first" data-caption="My caption">
-                    <img src='img/portfolio/portfolio1.png' class="photosBlock"/>
-                </a>
-                <a href="img/portfolio/portfolio1.png" data-fancybox="portfolio=first" data-caption="My caption">
-                    <img src='img/portfolio/portfolio1.png' class="photosBlock"/>
-                </a>
-            </div>
-        </div>
-        <div class="content_item">
             <div class="photosBlock_text">
                 <span>First shooting</span>
             </div>
@@ -93,7 +94,7 @@
                 </a>
             </div>
         </div>
-        <div class="content_item reverse">
+        <div class="content_item ">
             <a href="img/portfolio/portfolio1.png" data-fancybox="portfolio=first" data-caption="My caption">
                 <img src='img/portfolio/portfolio1.png' class="photosBlock"/>
             </a>
@@ -113,7 +114,7 @@
 <footer>
     <section>
         <h1>Get in touch</h1>
-            <form action="mail.php" method="post" class="rf form-check">
+            <form action="mail.php" method="post" class="rf form-check" name="Contacts" id="Contacts">
                 <div class="rline">
                     <input type="text" name="name" id="name" placeholder="Your name" class="rfield" required="required" />
                     <span class="rfield_error">Введите имя</span>
@@ -141,41 +142,21 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="script/jquery.fancybox.js"></script>
 <script type="text/javascript">
+    //Fancy-box
     $("[data-fancybox]").fancybox({
         selector : '[data-fancybox="images"]',
         loop     : true
     });
+
+    //Anchor scroll
+    $('a').click(function(){
+        $('html, body').animate({
+            scrollTop: $( $(this).attr('href') ).offset().top
+        }, 700);
+        return false;
+    });
 </script>
-<script type="text/javascript">
-    console.clear();
-
-    const app = (() => {
-            let body;
-    let menu;
-    let menuItems;
-
-    const init = () => {
-        body = document.querySelector('body');
-        menu = document.querySelector('.menu-icon');
-        menuItems = document.querySelectorAll('.nav__list-item');
-
-        applyListeners();
-    }
-
-    const applyListeners = () => {
-        menu.addEventListener('click', () => toggleClass(body, 'nav-active'));
-    }
-
-    const toggleClass = (element, stringClass) => {
-        if(element.classList.contains(stringClass))
-            element.classList.remove(stringClass);
-        else
-            element.classList.add(stringClass);
-    }
-
-    init();
-    })();
-</script>
+<script src="script/burgerMenu.js"></script>
 <script src="script/main.js"></script>
 <script src="script/formcheck.js"></script>
 <script src="script/is.mobile.js"></script>

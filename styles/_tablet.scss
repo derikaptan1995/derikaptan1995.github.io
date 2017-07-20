@@ -1,0 +1,101 @@
+@media only screen and (min-device-width: 668px) and (max-device-width: 1024px) {
+  header {
+    position: relative;
+    .header-photo {
+      background: url(../img/header.png) no-repeat;
+      background-size: cover;
+      width: 100%;
+      height: 510px;
+    }
+    .logo {
+      position: absolute;
+      top: 45%;
+      left: 5%;
+      font-size: 20px;
+      font-family: 'latobold';
+      margin-left: 0;
+    }
+  }
+
+  nav {
+    .nav__content {
+      .nav__list {
+        .nav__list-item{
+          padding: 20px 20px;
+        }
+      .icon_photo {
+        margin: auto 30px;
+      }
+      }
+    }
+  }
+
+  .recentWorks {
+    margin: 0 40px;
+    .firstBlock {
+      display: block;
+
+      .firstWork {
+        display: block;
+        width: 100%;
+        height: 680px;
+      }
+
+      .twoWorks {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 30px;
+        margin-left: 0;
+
+        .secondWork {
+          width: 48%;
+          height:330px;
+        }
+        .thirdWork {
+          width: 48%;
+          height:330px;
+        }
+      }
+    }
+    .secondBlock {
+      .fourthWork {
+        height: 460px;
+      }
+    }
+  }
+  .portfolio {
+    display: block;
+    margin: 0 40px;
+    .portfolio-title {
+      display: block;
+      text-align: center;
+      margin: 100px 0;
+      font-size: 36px;
+    }
+    .content_item {
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      a {
+        display: block;
+        width: 100%;
+        &:hover,
+        &:focus {
+          outline: none;
+        }
+      }
+      .photosBlock {
+        width: 100%;
+        height: auto;
+      }
+      .photosBlock_text {
+        margin: 25px auto;
+      }
+    }
+    .content_item.reverse {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+}

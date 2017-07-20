@@ -42,6 +42,7 @@ nav {
     }
   }
 }
+
 header {
   .header-photo {
     background: url("../img/header.png") no-repeat;
@@ -107,6 +108,9 @@ header {
   margin: 120px 120px;
   font-family: 'playfair_displaybold', sans-serif;
 
+  .portfolio-title {
+    display: none;
+  }
   .content_item {
     display: flex;
     a {
@@ -291,3 +295,4 @@ footer {
 
 
 @import 'mobile';
+@import '_tablet';

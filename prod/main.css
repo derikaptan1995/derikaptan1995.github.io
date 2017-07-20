@@ -197,6 +197,8 @@ header .logo {
   font-family: 'latobold';
   color: #FFF;
   margin-left: 80px; }
+  header .logo br {
+    display: none; }
 
 .recentWorks {
   padding-top: 120px;
@@ -516,13 +518,14 @@ footer {
     width: 100%;
     height: 300px; }
   header .logo {
-    position: absolute;
-    top: 20%;
+    top: 10%;
+    text-align: center;
     left: 5%;
-    font-size: 0.9rem;
+    font-size: 16px;
     font-family: 'latolight';
-    color: #FFF;
     margin: 0; }
+    header .logo br {
+      display: block; }
 
   .recentWorks {
     display: flex;

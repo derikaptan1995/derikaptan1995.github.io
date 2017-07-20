@@ -58,6 +58,9 @@ header {
     font-family:'latobold';
     color: $color6;
     margin-left:80px;
+    br {
+      display: none;
+    }
     }
 }
 .recentWorks {

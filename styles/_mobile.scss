@@ -93,8 +93,8 @@
             color: $color1;
             -webkit-transform: none;
             -ms-transform: none;
-            transform: none;
-          }
+              transform: none;
+            }
 
           &:before {
             content: "";
@@ -169,13 +169,15 @@
       height: 300px;
     }
     .logo {
-      position: absolute;
-      top: 20%;
+      top: 10%;
+      text-align: center;
       left: 5%;
-      font-size: 0.9rem;
+      font-size: 16px;
       font-family: 'latolight';
-      color: #FFF;
       margin:0;
+      br {
+        display: block;
+      }
     }
   }
   .recentWorks {
